@@ -22,12 +22,12 @@ def countLog(arr):
 print('This program considers the logarithm of the given numbers.\n')
 while input('\nDo you want to exit? ') != 'yes':
     zzz = input('Enter filename: ')
-    print(zzz)
+    # print(zzz)
     try:
         with open(str(zzz), 'r') as file_in:
             data = file_in.readlines()
-            file_in.close()
+            #file_in.close()
             countLog(data)
-    except FileNotFoundError:
+    except IOError:
         print('Oops! File not found! Try again\n')
 input('Bye!')
